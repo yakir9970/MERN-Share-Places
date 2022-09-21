@@ -8,7 +8,7 @@ const Users = () => {
       id: "u1",
       name: "max",
       image:
-        "https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FImage&psig=AOvVaw0CyRWxjjEdtF9sCcJqOxtI&ust=1663867052095000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCOCoovexpvoCFQAAAAAdAAAAABAD",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/220px-Image_created_with_a_mobile_phone.png",
       places: 3,
     },
   ]; //dummy data
