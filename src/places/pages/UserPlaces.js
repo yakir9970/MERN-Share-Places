@@ -11,8 +11,8 @@ const DUMMY = [
     imageUrl: "https://media.timeout.com/images/101705309/image.jpg",
     address: "350 Fifth Avenue · Manhattan, New York 10118",
     location: {
-      lat: 40.7484405,
-      lng: -73.9878584,
+      lat: 40.748441,
+      lng: -73.985664,
     },
     creator: "u1",
   },
@@ -23,8 +23,8 @@ const DUMMY = [
     imageUrl: "https://media.timeout.com/images/101705309/image.jpg",
     address: "350 Fifth Avenue · Manhattan, New York 10118",
     location: {
-      lat: 40.7484405,
-      lng: -73.9878584,
+      lat: 40.748441,
+      lng: -73.985664,
     },
     creator: "u2",
   },
