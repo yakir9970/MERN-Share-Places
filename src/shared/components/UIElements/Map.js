@@ -8,11 +8,30 @@ const Map = (props) => {
   const { center, zoom } = props;
 
   useEffect(() => {
+    const iconFeature = new window.ol.Feature({
+      geometry: new window.ol.geom.Point(
+        window.ol.proj.fromLonLat([center.lng, center.lat])
+      ), //This marker will not move.
+      name: "Somewhere",
+    });
     new window.ol.Map({
       target: mapRef.current.id,
       layers: [
         new window.ol.layer.Tile({
           source: new window.ol.source.OSM(),
+        }),
+        new window.ol.layer.Vector({
+          source: new window.ol.source.Vector({
+            features: [iconFeature],
+          }),
+          style: new window.ol.style.Style({
+            image: new window.ol.style.Icon({
+              anchor: [0.5, 46],
+              anchorXUnits: "fraction",
+              anchorYUnits: "pixels",
+              src: "https://openlayers.org/en/latest/examples/data/icon.png",
+            }),
+          }),
         }),
       ],
       view: new window.ol.View({
