@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./Auth.css";
 import {
   VALIDATOR_EMAIL,
@@ -11,7 +11,10 @@ import Card from "../../shared/components/UIElements/Card";
 
 import { useForm } from "../../shared/hooks/form-hook";
 
+import { AuthContext } from "../../shared/context/auth-context";
+
 const Auth = () => {
+  const auth = useContext(AuthContext);
   const [isLoginMode, setIsLoginMode] = useState(true);
   const [formState, inputHandler, setFormData] = useForm(
     {
@@ -54,6 +57,7 @@ const Auth = () => {
   const authSubmitHandler = (event) => {
     event.preventDefault();
     console.log(formState.inputs); //send this to the backend!
+    auth.login();
   };
 
   return (
