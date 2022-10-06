@@ -15,22 +15,22 @@ import UpdatePlace from "./places/pages/UpdatePlace";
 import Auth from "./user/pages/Auth";
 
 const App = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [token, setToken] = useState(false);
   const [userId, setuserId] = useState(false);
 
-  const login = useCallback((userId) => {
-    setIsLoggedIn(true);
+  const login = useCallback((userId, token) => {
+    setToken(token);
     setuserId(userId);
   }, []);
 
   const logout = useCallback(() => {
-    setIsLoggedIn(false);
+    setToken(null);
     setuserId(null);
   }, []);
 
   let routes;
 
-  if (isLoggedIn) {
+  if (token) {
     routes = (
       <Switch>
         <Route path="/" exact>
@@ -68,7 +68,8 @@ const App = () => {
   return (
     <AuthContext.Provider
       value={{
-        isLoggedIn: isLoggedIn,
+        isLoggedIn: !!token,
+        token: token,
         userId: userId,
         login: login,
         logout: logout,
