@@ -29,17 +29,28 @@
 
   .nav-links{
     margin: auto;
-    width: 350px;
-    display: flex;
+    width: 500px;
+    display:  flex;
     flex-direction: row;
     list-style: none;
     padding: 25px 0;
   }
 
+  .nav-links button{
+    color: white;
+    background-color: transparent;
+    border: 0;
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    margin-top: -4px;
+  }
+
   .nav-links a,
   .nav-links li{
     text-decoration: none;
-    margin:auto;
+    margin: auto;
     color: white;
     font-size: 20px;
     cursor: pointer;
@@ -49,7 +60,6 @@
     display: block;
     content: '';
     border-bottom: solid 4px #099fff;
-    padding-bottom: 1%;
     transform: scaleX(0);
     transition: transform 300ms ease-in-out;
   }
