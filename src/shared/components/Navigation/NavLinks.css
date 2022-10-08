@@ -44,7 +44,7 @@
     cursor: pointer;
     text-decoration: none;
     display: block;
-    margin-top: -4px;
+    margin-top: -4px;  
   }
 
   .nav-links a,
@@ -68,6 +68,41 @@
   .nav-links a:hover:after{
     transform: scaleX(1);
   }  
+
+  @media (max-width: 768px) {
+    .nav-links {
+      flex-direction: column;
+      margin: 150px 0 0 0;
+    }
+
+    .nav-links a,
+  .nav-links li{
+    margin-top: 40px;
+    margin-left: 10px;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    color: grey;
+    font-size: 35px;
+    cursor: pointer;
+  }
+
+  .nav-links button{
+    color: grey;
+    background-color: transparent;
+    border: 0;
+    font-size: 35px;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    margin-top: -10px;  
+    margin-left: 10px;
+  }
+
+  
+  }
+
+  
   
    /* .nav-links button {
     cursor: pointer;
